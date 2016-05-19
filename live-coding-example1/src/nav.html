@@ -1,0 +1,20 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li ng-class="{ active: ('app.route1' | includedByState) || ('app.route1.list' | includedByState) }"><a ui-sref="app.route1">Route 1</a></li>
+      <li ng-class="{ active: ('app.route2' | includedByState) || ('app.route2.list' | includedByState) }"><a ui-sref="app.route2">Route 2</a></li>
+      <li ng-class="{ active: ('app.users' | includedByState) || ('app.users.detail' | includedByState) }"><a ui-sref="app.users.list">Users</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6">
+    <div back-button></div>
+  </div>
+
+  <div class="span6">
+    <p class="text-right">Logged in as: <strong>{{currentUser.name}}</strong></p>
+  </div>
+</div>
+
