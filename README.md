@@ -9,6 +9,8 @@ Syllabus
     * Ui-router vs ngRoute
     * Additional features of ui-router beyond ngRoute
     * *Lab 1 - A small personal website with nested states*
+  * **Additional Content: Angular 1.5 Components and Component Router**
+    * [Walkthrough Video](https://vimeo.com/167970496)
 
 * Week 2
   * **Directive Deep Dive**
