@@ -1,0 +1,55 @@
+<html ng-app="app">
+  <head>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- START project files -->
+    <script src="gameManagerDirective/gameManagerDirective.js"></script>
+    <script src="playerDirective/playerDirective.js"></script>
+    <script src="app.js"></script>
+    <!-- END project files -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+
+    <div ng-class="{hide: !$root.view.winnerMessage}" class="overlay">
+      <div class="overlay--message">{{ $root.view.winnerMessage }}</div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12" game-manager>
+
+          <div class="row push-down">
+
+            <div class="col-md-6">
+              <div
+                 player
+                 class="player"
+                 name="Player 1">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div
+                 player
+                 class="player"
+                 name="Player 2">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

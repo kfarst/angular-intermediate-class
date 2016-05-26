@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-12 h1 player--name" ng-class="{ 'my-turn': player.myTurn }">{{ name }} | <span count="player.points" ng-pluralize when="{ '1': '1 point', 'other': '{} points' }"></span></div>
+</div>
+
+<div class="row center-elements">
+  <div class="col-md-2 card" ng-repeat="card in cards"  ng-class="{ selected: card.selected }" ng-click="player.myTurn && !goFishActive() ? selectCard(card) : $event.preventDefault()">
+    <div class="{{ card.suit }}">
+      <p>{{ card.rank }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 h1 player--name" ng-class="{ 'my-turn': player.myTurn }"></div>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-4 text-center">
+    <span class="h1 go-fish" ng-if="players[0].goFish">Go Fish</span>
+    <a class="btn btn-lg btn-primary" ng-if="players[1].goFish" ng-click="drawCardForPlayer(players[0])">Draw Card</a>
+    <a class="btn btn-lg btn-primary" ng-if="players[0].myTurn && selectedCard" ng-click="askForSelectedCard()">Have Any {{ selectedCard.rank }}s?</a>
+  </div>
+
+  <div class="col-md-4">
+    <a class="btn btn-lg btn-warning new-game" ng-click="newGame()">New Game</a>
+  </div>
+
+  <div class="col-md-4 text-center">
+    <span class="h1 go-fish" ng-if="players[1].goFish">Go Fish</span>
+    <a class="btn btn-lg btn-primary" ng-if="players[0].goFish" ng-click="drawCardForPlayer(players[1])">Draw Card</a>
+    <a class="btn btn-lg btn-primary" ng-if="players[1].myTurn && selectedCard" ng-click="askForSelectedCard()">Have Any {{ selectedCard.rank }}s?</a>
+  </div>
+</div>
+
+<div ng-transclude></div>
