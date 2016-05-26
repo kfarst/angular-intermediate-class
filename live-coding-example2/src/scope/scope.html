@@ -1,0 +1,33 @@
+<h4>Controller scope is: {{ $id }}</h4>
+
+<h2 class="page-header">Directive With Parent Scope</h2>
+
+<div use-parent-scope>
+  <h3>Your name is: {{ parentScopeName }}</h3>
+</div>
+
+<h2 class="page-header">Directive With New Scope</h2>
+
+<div use-new-scope>
+  <h3>Your name is: {{ newScopeName }}</h3>
+</div>
+
+<h2 class="page-header">Directive With Two-Way Isolate Scope</h2>
+
+<div use-two-way-isolate-scope name="twoWayIsolateScopeName">
+  <h3>Your name is: {{ twoWayIsolateScopeName }}</h3>
+</div>
+
+
+<h2 class="page-header">Directive With One-Way Isolate Scope</h2>
+
+<div use-one-way-isolate-scope name="oneWayIsolateScopeName">
+  <h3>Your name is: {{ oneWayIsolateScopeName }}</h3>
+</div>
+
+<h2 class="page-header">Directive With Text Isolate Scope</h2>
+
+<div use-text-isolate-scope name="{{textIsolateScopeName}}">
+  <h3>Your name is: {{ textIsolateScopeName }}</h3>
+</div>
+

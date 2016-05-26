@@ -1,0 +1,58 @@
+<h2 class="page-header">Scope vs This</h2>
+
+<div scope-vs-this name="Kevin Farst"></div>
+
+<h2 class="page-header">Parent-child relationship</h2>
+
+<div parent-directive>
+  <div child-directive></div>
+</div>
+
+<h2 class="page-header">Bind To Controller</h2>
+
+<div class="row">
+  <div class="col-md-12">
+    <h3>Boolean</h3>
+  </div>
+</div>
+
+<div use-bind-to-controller-boolean name="bindToControllerBooleanName">
+  <h3>Your name is: {{ bindToControllerBooleanName }}</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h3>Object Literal</h3>
+  </div>
+</div>
+
+<div use-bind-to-controller-object name="bindToControllerObjectName">
+  <h3>Your name is: {{ bindToControllerObjectName }}</h3>
+</div>
+
+<h2 class="page-header">Model Controller</h2>
+
+<textarea cols="100" rows="5" ng-model="view.newText" character-count max-chars="10"></textarea>
+
+<h2 class="page-header">Form Controller</h2>
+
+<!-- $scope.testForm inside controller -->
+<form name="testForm">
+  <div inline-form-errors></div>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" ng-model="formModel.name" required>
+  </div>
+
+  <div class="form-group">
+    <label>Age</label>
+    <input type="text" class="form-control" name="age" ng-model="formModel.age" ng-maxlength="3">
+  </div>
+
+  <div class="form-group">
+    <label>City</label>
+    <input type="text" class="form-control" name="city" ng-model="formModel.city" ng-minlength="5">
+  </div>
+</form>
+
+<pre>{{ testForm | json }}</pre>

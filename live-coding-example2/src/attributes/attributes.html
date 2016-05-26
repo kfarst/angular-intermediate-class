@@ -1,0 +1,13 @@
+<h2>Attributes Hash</h2>
+
+<div
+  attr-demo
+  two-way="twoWay"
+  one-way="oneWay()"
+  text="'text'"
+  empty-attr
+  has-empty-attribute-property="{{ view.attrHash.hasOwnProperty('emptyAttr') }}"></div>
+
+<pre>
+{{ view.attrHash | json }}
+</pre>
