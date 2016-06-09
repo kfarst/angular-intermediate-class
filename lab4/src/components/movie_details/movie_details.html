@@ -1,0 +1,2 @@
+<a (click)="goBack()" class="btn btn-link"><< Back to {{ categoryType | titleize }} List</a>
+<movie-summary *ngIf="movie" (viewCreated)="showMoreInfo()" #summary [categoryType]="categoryType" [movie]="movie"></movie-summary>
